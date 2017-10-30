@@ -1,0 +1,160 @@
+{
+  "contract_name": "VotingRegistry",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "numberOfVoting",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_votingId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getVoting",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_votingAddress",
+          "type": "address"
+        }
+      ],
+      "name": "addVoting",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "_votingAddress",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "id",
+          "type": "uint256"
+        }
+      ],
+      "name": "VotingAdded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    }
+  ],
+  "unlinked_binary": "0x60606040525b60008054600160a060020a03191633600160a060020a03161790555b5b610385806100316000396000f300606060405263ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663213bb56081146100695780633afc72821461008e5780638da5cb5b146100c0578063988574fb146100ef578063f2fde38b14610120575b600080fd5b341561007457600080fd5b61007c610141565b60405190815260200160405180910390f35b341561009957600080fd5b6100a4600435610147565b604051600160a060020a03909116815260200160405180910390f35b34156100cb57600080fd5b6100a461019b565b604051600160a060020a03909116815260200160405180910390f35b34156100fa57600080fd5b61007c600160a060020a03600435166101aa565b60405190815260200160405180910390f35b341561012b57600080fd5b61013f600160a060020a0360043516610275565b005b60015481565b600080821015801561015a575060025482105b151561016557600080fd5b600280548390811061017357fe5b906000526020600020900160005b9054906101000a9004600160a060020a031690505b919050565b600054600160a060020a031681565b60008054819033600160a060020a039081169116146101c857600080fd5b60028054906101da906001830161030e565b9050826002828154811015156101ec57fe5b906000526020600020900160005b6101000a815481600160a060020a030219169083600160a060020a03160217905550806001016001819055507fc907cbef866338602982866ab690654800e270cbf2044eb49b28438fadbf319d8382604051600160a060020a03909216825260208201526040908101905180910390a18091505b5b50919050565b60005433600160a060020a0390811691161461029057600080fd5b600160a060020a03811615156102a557600080fd5b600054600160a060020a0380831691167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a36000805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0383161790555b5b50565b81548183558181151161033257600083815260209020610332918101908301610338565b5b505050565b61035691905b80821115610352576000815560010161033e565b5090565b905600a165627a7a7230582054fd5c50834c2adce00dea7868e18f82112926ae9a663611f8581233359673130029",
+  "networks": {
+    "4": {
+      "events": {
+        "0xc907cbef866338602982866ab690654800e270cbf2044eb49b28438fadbf319d": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "_votingAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "id",
+              "type": "uint256"
+            }
+          ],
+          "name": "VotingAdded",
+          "type": "event"
+        },
+        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "previousOwner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "name": "newOwner",
+              "type": "address"
+            }
+          ],
+          "name": "OwnershipTransferred",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x3d72d745b5c4bbb197b057201aa2d4cb9ebab083",
+      "updated_at": 1509370150528
+    }
+  },
+  "schema_version": "0.0.5",
+  "updated_at": 1509370150528
+}
