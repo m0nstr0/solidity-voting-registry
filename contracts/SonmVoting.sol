@@ -62,10 +62,7 @@ contract SonmVoting is Voting {
     require(block.number >= BLOCK_START && block.number < BLOCK_END);
     require(allowanceAmount > 0);
     require(_optionId >= 0 && _optionId < NUM_OF_OPTIONS);
-
-    if (!sonmToken.transferFrom(msg.sender, this, allowanceAmount)) {
-      revert();
-    }
+    require(sonmToken.transferFrom(msg.sender, this, allowanceAmount));
 
     balanceOf[msg.sender] += allowanceAmount;
     votes[_optionId] += 1;
@@ -99,7 +96,7 @@ contract SonmVoting is Voting {
     uint balance = balanceOf[msg.sender];
     require(balance > 0);
     balanceOf[msg.sender] = 0;
-    sonmToken.transfer(msg.sender, balance);
+    require(sonmToken.transfer(msg.sender, balance));
   }
 
 }
