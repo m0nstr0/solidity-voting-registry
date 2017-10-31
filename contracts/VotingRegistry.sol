@@ -3,13 +3,13 @@ pragma solidity ^0.4.15;
 import 'zeppelin-solidity/contracts/ownership/Ownable.sol';
 
 //Реестр голосовалки
-contract VotingRegistry is Ownable {
+contract VotingRegistry  {
     uint public numberOfVoting;
-    address[] votings;
+    address[] public votings;
 
     event VotingAdded(address _votingAddress, uint id);
 
-    function addVoting(address _votingAddress) public onlyOwner returns (uint) {
+    function addVoting(address _votingAddress) public  returns (uint) {
         uint id = votings.length ++;
         votings[id] = _votingAddress;
         numberOfVoting = id + 1;
@@ -17,8 +17,7 @@ contract VotingRegistry is Ownable {
         return id;
     }
 
-    function getVoting(uint _votingId) public constant returns (address) {
-        require(_votingId >= 0 && _votingId < votings.length);
-        return votings[_votingId];
+    function getVotings() public constant returns (address[]) {
+        return votings;
     }
 }
